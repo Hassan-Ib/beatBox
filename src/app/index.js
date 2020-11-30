@@ -16,6 +16,8 @@ let beats = {
 // 4,5,6,7 #ff00ff
 // #ffffff
 
+window.addEventListener("load", init);
+
 function init() {
   const setColors = () => {
     for (let keys in beats) {
@@ -28,8 +30,7 @@ function init() {
       });
     }
   };
-
-  window.addEventListener("load", setColors);
+  setColors();
 
   const onBtnPress = (key) => {
     let btn = document.getElementById(key);
